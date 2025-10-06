@@ -8,6 +8,7 @@
 #include "CMiss.h"
 #include "CCharacterManager.h"
 #include "CGame.h"
+#include "CVector.h"
 
 class CApplication
 {
@@ -29,7 +30,7 @@ public:
 private:
 	CSound mSoundBgm;
 	CSound mSoundOver;
-
+	CVector mEye;
 	CGame* mpGame;
 	static CCharacterManager mCharacterManager;
 	EState mState;
