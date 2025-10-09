@@ -124,7 +124,7 @@ void CApplication::Update()
 	CTriangle t2;
 	//法線と頂点の設定
 	t2.Vertex(CVector(0.0f, 0.5f, 1.0f), CVector(0.0f, 0.0f, 2.0f), CVector(0.0f, -0.5f, 1.0f));
-	t2.Normal(CVector(1.0f, 1.0f, 0.0f));
+	t2.Normal(CVector(1.0f, 0.0f, 0.0f));
 	//三角形の描画
 	t2.Render();
 }
