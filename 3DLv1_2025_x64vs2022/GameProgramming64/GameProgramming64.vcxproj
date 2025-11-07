@@ -42,6 +42,7 @@
     <ClCompile Include="CUi.cpp" />
     <ClCompile Include="CVector.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="CMatrix.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CApplication.h" />
@@ -68,6 +69,7 @@
     <ClInclude Include="CUi.h" />
     <ClInclude Include="CVector.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="CMatrix.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
