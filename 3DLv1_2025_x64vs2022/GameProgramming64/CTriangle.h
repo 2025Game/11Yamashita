@@ -24,6 +24,9 @@ public:
 	void Normal(const CVector& v0, const CVector& v1, const CVector& v2);
 	//UVê›íË
 	void UV(const CVector& v0, const CVector& v1, const CVector& v2);
+	//ï`âÊ
+//Render(çsóÒ)
+	void Render(const CMatrix& m);
 
 private:
 	CVector mV[3]; //í∏ì_ç¿ïW

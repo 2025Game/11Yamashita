@@ -18,6 +18,10 @@ public:
 	//•`‰æ
 	void Render();
 	~CModel();
+	//•`‰æ
+	//Render(s—ñ)
+	void Render(const CMatrix& m);
+
 private:
 	//OŠpŒ`‚Ì‰Â•Ï’·”z—ñ
 	std::vector<CTriangle> mTriangles;

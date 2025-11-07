@@ -1,6 +1,7 @@
 #pragma once
 #ifndef CVECTOR_H
 #define CVECTOR_H
+#include "CMatrix.h"
 /*
  ベクトルクラス
  ベクトルデータを扱います
@@ -27,6 +28,8 @@ public:
 	float Y() const;
 	//Zの値を得る
 	float Z() const;
+	//CVector * CMatrixの結果をCVectorで返す
+	CVector operator*(const CMatrix& m) const;
 private:
 	//3D各軸での値を設定
 	float mX, mY, mZ;
