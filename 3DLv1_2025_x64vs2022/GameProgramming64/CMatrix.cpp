@@ -97,20 +97,42 @@ CMatrix CMatrix::RotateX(float degree)
 }
 //移動行列の作成
 //Translate(移動量X, 移動量Y, 移動量Z)
-CMatrix CMatrix::Translate(float mx, float my, float mz) 
+CMatrix CMatrix::Translate(float mx, float my, float mz)
 {
-	//角度からラジアンを求める
-	float rad = mx / 180.0f * M_PI;
-	//単位行列にする
-	Identity();
-	//Z軸で回転する行列の設定
-	mM[0][3] = mM[2][2] = cosf(rad);
-	mM[1][3] = sinf(rad);
-	mM[2][3] = -mM[1][2];
-	//この行列を返す
+	{
+	mM[0][0] = 1;
+	mM[0][1] = 0;
+	mM[0][2] = 0;
+	mM[0][3] = 0;
+	mM[1][0] = 0;
+	mM[1][1] = 1;
+	mM[1][2] = 0;
+	mM[1][3] = 0;
+	mM[2][0] = 0;
+	mM[2][1] = 0;
+	mM[2][2] = 1;
+	mM[2][3] = 0;
+	mM[3][0] = mx;
+	mM[3][1] = my;
+	mM[3][2] = mz;
+	mM[3][3] = 1;
+}
 	return *this;
 }
 void CMatrix::M(int row, int col, float value)
 {
 	mM[row][col] = value;
 }
+//*演算子のオーバーロード
+//CMatrix * CMatrix の演算結果を返す
+//const CMatrix CMatrix::operator*(const CMatrix& m) const
+//{
+	//for(int i = 0; i < 4; ++i) {
+//		CMatrix t;
+//		t.mM[0][0] = mM[0][0] * m.mM[0][0] + mM[0][1] * m.mM[1][0] + mM[0][2] * m.mM[2][0] + mM[0][3] * m.mM[3][0];
+//		t.mM[0][1] = mM[0][0] * m.mM[0][1] + mM[0][1] * m.mM[1][1] + mM[0][2] * m.mM[2][1] + mM[0][3] * m.mM[3][1];
+//		t.mM[0][2] = mM[0][0] * m.mM[0][2] + mM[0][1] * m.mM[1][2] + mM[0][2] * m.mM[2][2] + mM[0][3] * m.mM[3][2];
+//		t.mM[0][3] = mM[0][0] * m.mM[0][3] + mM[0][1] * m.mM[1][3] + mM[0][2] * m.mM[2][3] + mM[0][3] * m.mM[3][3];
+//		return t;
+//	};
+//}
