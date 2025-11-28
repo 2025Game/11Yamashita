@@ -11,6 +11,7 @@
 #include "CVector.h"
 #include "CModel.h"
 #include "CMatrix.h"
+#include "CCharacter3.h"
 
 class CApplication
 {
@@ -29,6 +30,7 @@ public:
 	void Start();
 	//繰り返し実行するプログラム
 	void Update();
+	CCharacter3 mCharacter;
 private:
 	CSound mSoundBgm;
 	CSound mSoundOver;
@@ -46,4 +48,6 @@ private:
 	//モデルクラスのインスタンス作成
 	CModel mModel;
 	CModel mBackGround; //背景モデル
+	CCharacter3 mPlayer;
+	
 };
