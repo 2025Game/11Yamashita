@@ -30,7 +30,6 @@ public:
 	void Start();
 	//ŒJ‚è•Ô‚µÀs‚·‚éƒvƒƒOƒ‰ƒ€
 	void Update();
-	CCharacter3 mCharacter;
 private:
 	CSound mSoundBgm;
 	CSound mSoundOver;

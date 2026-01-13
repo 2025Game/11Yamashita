@@ -33,5 +33,6 @@ public:
 private:
 	//3DŠe²‚Å‚Ì’l‚ğİ’è
 	float mX, mY, mZ;
+
 };
 #endif

@@ -10,7 +10,6 @@ CVector::CVector(float x, float y, float z)
 	, mY(y)
 	, mZ(z)
 {}
-
 //Set(XÀ•W, YÀ•W, ZÀ•W)
 void CVector::Set(float x, float y, float z)
 {
