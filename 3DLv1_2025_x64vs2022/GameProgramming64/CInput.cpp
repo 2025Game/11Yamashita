@@ -10,3 +10,8 @@ bool CInput::Key(char key)
 {
 	return GetAsyncKeyState(key) < 0;
 }
+
+bool CInput::KeyTrigger(char key)
+{
+	return false;
+}

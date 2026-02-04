@@ -10,5 +10,6 @@ public:
 	//true：文字のキーが押されている
 	//false:文字のキーが押されていない
 	bool Key(char key);
+	bool KeyTrigger(char key);
 
 };

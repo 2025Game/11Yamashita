@@ -30,6 +30,7 @@ public:
 	//法線設定
 	//Normal(法線ベクトル)
 	void Normal(const CVector& n);
+
 	//描画
 	void Render();
 	//Normal(法線ベクトル1, 法線ベクトル2, 法線ベクトル3)
@@ -39,9 +40,8 @@ public:
 	//描画
 //Render(行列)
 	void Render(const CMatrix& m);
-
+	CVector mV[3];
 private:
-	CVector mV[3]; //頂点座標
 	CVector mN[3]; //法線
 	int mMaterialIdx; //マテリアル番号
 	CVector mUv[3]; //テクスチャマッピング
