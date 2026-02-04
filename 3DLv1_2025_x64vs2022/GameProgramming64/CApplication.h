@@ -13,6 +13,7 @@
 #include "CMatrix.h"
 #include "CCharacter3.h"
 
+
 class CApplication
 {
 public:

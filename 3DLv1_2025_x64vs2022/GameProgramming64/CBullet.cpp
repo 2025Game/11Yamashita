@@ -1,6 +1,6 @@
 #include "CBullet.h"
 #include "CPlayer.h"
-#define VELOCITY CVector(0.0f, 0.0f, 0.1f) //移動速度
+#define VELOCITY CVector(0.0f, 0.0f, 1.0f) //移動速度
 //幅と奥行きの設定
 //Set(幅, 奥行)
 void CBullet::Set(float w, float d) 
@@ -28,9 +28,9 @@ void CBullet::Set(float w, float d)
 void CBullet::Update() {
 	CTransform::Update();
 	//位置更新　進行方向へ１進む
-	if (mInput.KeyTrigger(VK_SPACE)) {
+	/*if (mInput.KeyTrigger(VK_SPACE)) {
 		mIsShot = true;
-	}
+	}*/
 
 	// 発射後は自動で進み続ける
 	if (mIsShot) {
