@@ -19,7 +19,6 @@ void CBullet::Set(float w, float d)
 	mT.mV[0] = v0;
 	mT.mV[1] = v1;
 	mT.mV[2] = v2;
-	//w, 0.0f, 0.0f    -w , 0.0f, 0.0f		0.0f, 0.0f, d
 	//三角形の法線設定
 	mT.Normal(CVector(0.0f, 1.0f, 0.0f));
 }
@@ -28,9 +27,9 @@ void CBullet::Set(float w, float d)
 void CBullet::Update() {
 	CTransform::Update();
 	//位置更新　進行方向へ１進む
-	/*if (mInput.KeyTrigger(VK_SPACE)) {
-		mIsShot = true;
-	}*/
+	//if (mInput.KeyTrigger(VK_SPACE)) {
+	//	mIsShot = true;
+	//}
 
 	// 発射後は自動で進み続ける
 	if (mIsShot) {

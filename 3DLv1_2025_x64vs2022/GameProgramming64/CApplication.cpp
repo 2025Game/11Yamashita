@@ -88,8 +88,10 @@ void CApplication::Update()
 		gluLookAt(e.X(), e.Y(), e.Z(), c.X(), c.Y(), c.Z(), u.X(), u.Y(), u.Z());
 	mPlayer.Render();
 	mBackGround.Render();
-	mPlayer.bullet.Update();
-	mPlayer.bullet.Render();
+	//タスクマネージャの更新
+	mTaskManager.Update();
+	//タスクマネージャの描画
+	mTaskManager.Render();
 	////描画開始
 	////glBegin(形)
 	////GL_TRIANGLES：三角形
@@ -102,7 +104,7 @@ void CApplication::Update()
 	//glVertex3f(v2.X(), v2.Y(), v2.Z());
 
 	////法線と頂点の設定
-	n.Set(0.0f, 0.0f, 1.0f);
+	//n.Set(0.0f, 0.0f, 1.0f);
 	//v0.Set(0.5f, 0.0f, 0.0f);
 	//v1.Set(0.0f, 1.0f, 0.0f);
 	//v2.Set(-0.5f, 0.0f, 0.0f);
@@ -149,4 +151,9 @@ void CApplication::Update()
 	//t2.Normal(CVector(1.0f, 0.0f, 0.0f));
 	////三角形の描画
 	//t2.Render();
+}
+CTaskManager CApplication::mTaskManager;
+CTaskManager* CApplication::TaskManager()
+{
+	return &mTaskManager;
 }

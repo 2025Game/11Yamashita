@@ -12,7 +12,7 @@
 #include "CModel.h"
 #include "CMatrix.h"
 #include "CCharacter3.h"
-
+#include "CTaskManager.h"
 
 class CApplication
 {
@@ -31,6 +31,7 @@ public:
 	void Start();
 	//ŒJ‚è•Ô‚µÀs‚·‚éƒvƒƒOƒ‰ƒ€
 	void Update();
+	static CTaskManager* TaskManager();
 private:
 	CSound mSoundBgm;
 	CSound mSoundOver;
@@ -49,5 +50,5 @@ private:
 	CModel mModel;
 	CModel mBackGround; //”wŒiƒ‚ƒfƒ‹
 	CPlayer mPlayer;
-	
+	static CTaskManager mTaskManager;
 };
