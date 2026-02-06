@@ -12,7 +12,7 @@ void CBullet::Set(float w, float d)
 	//頂点2の座標を設定する
 	v1.Set(w, 0.0f, 0.0f);
 	//頂点3の座標を設定する
-	v2.Set(0.0f, 0.5f, d);
+	v2.Set(0.0f, 0.0f, -d);
 	//スケール設定
 	mScale = CVector(1.0f, 1.0f, 1.0f);
 	//三角形の頂点設定
@@ -44,9 +44,9 @@ void CBullet::Render()
 	float c[] = { 1.0f, 1.0f, 0.0f, 1.0f };
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, c);
 	// 位置・回転・スケール反映
-	glTranslatef(mPosition.X(), mPosition.Y(), mPosition.Z()); 
+	//glTranslatef(mPosition.X(), mPosition.Y(), mPosition.Z());
 	// 三角形描画
-	mT.Render();
+	mT.Render(Matrix());
 }
 
 CBullet::CBullet()
