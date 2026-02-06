@@ -23,12 +23,15 @@ public:
 	//•`‰æ
 	void Render();
 	bool mIsShot = true;
+	CBullet();
 private:
 	CVector mN[3];//–@ü
 	CTriangle mV[3];
 	//OŠpŒ`
 	CTriangle mT;
 	CInput mInput;
+	//¶‘¶ŠÔ
+	int mLife;
 
 };
 

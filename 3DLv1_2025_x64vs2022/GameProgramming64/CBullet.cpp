@@ -25,15 +25,15 @@ void CBullet::Set(float w, float d)
 
 //更新
 void CBullet::Update() {
-	CTransform::Update();
-	//位置更新　進行方向へ１進む
-	//if (mInput.KeyTrigger(VK_SPACE)) {
-	//	mIsShot = true;
-	//}
-
-	// 発射後は自動で進み続ける
-	if (mIsShot) {
-		mPosition = mPosition + VELOCITY * mMatrixRotate;
+	//生存時間の判定
+	if (mLife-- > 0) {
+		CTransform::Update();
+		//位置更新
+		mPosition = mPosition + CVector(0.0f, 0.0f, 1.0f) * mMatrixRotate;;
+	}
+	else {
+		//無効にする
+		mEnabled = false;
 	}
 }
 
@@ -49,3 +49,6 @@ void CBullet::Render()
 	mT.Render();
 }
 
+CBullet::CBullet()
+	: mLife(50)
+{}

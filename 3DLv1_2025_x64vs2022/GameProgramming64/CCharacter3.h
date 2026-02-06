@@ -17,6 +17,11 @@ public:
 	void Model(CModel* m);
 	//描画処理
 	void Render();
+	//デストラクタ
+	~CCharacter3();
+	//コンストラクタ
+	CCharacter3();
+
 protected:
 	CModel* mpModel; //モデルのポインタ
 };
