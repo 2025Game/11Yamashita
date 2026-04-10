@@ -8,6 +8,7 @@
 //モデルデータの指定
 #define MODEL_OBJ "res\\f14.obj", "res\\f14.mtl"
 #define MODEL_BACKGROUND  "res\\sky.obj", "res\\sky.mtl"  //背景モデルデータの指定
+#define MODEL_C5 "res￥￥c5.obj", "res￥￥c5.mtl"  //敵輸送機モデル
 #define SOUND_BGM "res\\mario.wav" //BGM音声ファイル
 #define SOUND_OVER "res\\mdai.wav" //ゲームオーバー音声ファイル
 
