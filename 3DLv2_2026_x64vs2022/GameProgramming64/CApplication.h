@@ -2,6 +2,7 @@
 #include "CRectangle.h"
 #include "CTexture.h"
 #include "CEnemy.h"
+#include "CEnemy3.h"
 #include "CBullet.h"
 #include "CPlayer.h"
 #include "CFont.h"
