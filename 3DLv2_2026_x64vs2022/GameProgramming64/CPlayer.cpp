@@ -5,7 +5,7 @@
 
 #define ROTATION_YV	CVector(0.0f, 1.0f, 0.0f) //‰ñ“]‘¬“x
 #define VELOCITY CVector(0.0f, 0.0f, 0.1f) //ˆÚ“®‘¬“x
-#define ROTATION_XV	CVector(1.0f, 0.0f, 0.0f) //‰ñ“]‘¬“x
+#define ROTATION_XV	CVector(1.0f, 0.0f, 0.0f) //‰ñ“]‘¬“xz
 
 CPlayer* CPlayer::spInstance = nullptr;
 
