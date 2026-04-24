@@ -9,7 +9,10 @@ void CApplication3::Start()
 {
 	//タイトルシーンのインスタンスを作成
 	mpScene = std::make_unique<CTitleScene>();
-	mpScene->Load(); //タイトルシーンのロード
+	mpScene->Load(); //タイトルシーンのロード	
+	//ゲームシーンのインスタンスを作成
+	mpScene = std::make_unique<CGameScene>();
+	mpScene->Load(); //ゲームシーンのロード
 }
 void CApplication3::Update()
 {
