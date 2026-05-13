@@ -40,6 +40,9 @@
     <Filter Include="ソース ファイル\BaseSystem\Object\Character\Model\Game\Scene">
       <UniqueIdentifier>{f017fe15-dbe0-4334-99ae-47dce3298445}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\BaseSystem\Object\Character\Model\Game\Character">
+      <UniqueIdentifier>{2dc2a8ce-347d-4695-946a-f1e1276d036c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CApplication.cpp">
@@ -176,6 +179,9 @@
     </ClCompile>
     <ClCompile Include="CGameScene.cpp">
       <Filter>ソース ファイル\BaseSystem\Object\Character\Model\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="CXPlayer.cpp">
+      <Filter>ソース ファイル\BaseSystem\Object\Character\Model\Game\Character</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -325,6 +331,9 @@
     </ClInclude>
     <ClInclude Include="CXCharacter.h">
       <Filter>ソース ファイル\BaseSystem\Object\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="CXPlayer.h">
+      <Filter>ソース ファイル\BaseSystem\Object\Character\Model\Game\Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
