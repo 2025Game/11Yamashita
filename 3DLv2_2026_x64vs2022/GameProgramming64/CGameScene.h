@@ -3,6 +3,7 @@
 #define CGAMESCENE_H
 #include "CSceneBase.h"
 #include "CModel.h"
+#include "CModelX.h"
 //ゲームシーン
 class CGameScene :public CSceneBase
 {
@@ -12,6 +13,7 @@ public:
 	void Load();
 	//シーンの更新処理
 	void Update();
+	CModelX mPlayer;
 private:
 	CModel mBackGround; //背景モデル
 };
