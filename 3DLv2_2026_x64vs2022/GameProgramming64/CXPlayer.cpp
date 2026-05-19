@@ -3,9 +3,10 @@
 
 CXPlayer::CXPlayer()
 {
+	mPosition = CVector(1.0f, 0.0f, 0.0f);
 	mColliderLine.Set(
 		this,&mMatrix,CVector(0.0f, 3.5f, 0.0f),
-		CVector(1.0f, 0.0f, 0.0f)
+		CVector(0.0f, 0.0f, 0.0f)
 	);
 }
 
