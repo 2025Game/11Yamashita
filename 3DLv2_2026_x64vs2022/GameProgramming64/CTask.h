@@ -2,7 +2,6 @@
 #define CTASK_H
 class CTaskManager;
 class CCollisionManager;
-
 /*
 タスククラス
 タスクリストの要素
@@ -13,6 +12,7 @@ class CTask {
 public:
 	//衝突処理
 	virtual void Collision() {}
+	static CCollisionManager* Instance();
 
 	//デフォルトコンストラクタ
 	CTask()

@@ -20,6 +20,7 @@ void CGameScene::Load()
 	character->Model(&mBackGround);
 	CXPlayer* xchar = new CXPlayer();
 	xchar->Init(&mPlayer);
+	mColliderMesh.Set(nullptr, nullptr, &mBackGround);
 }
 
 void CGameScene::Update()
@@ -30,6 +31,10 @@ void CGameScene::Update()
 		0.0f, 1.0f, 0.0f);
 	//全キャラクタの更新
 	CTaskManager::Instance()->Update();
+	//衝突処理の呼び出し
+	CTaskManager::Instance()->Collision();
 	//全キャラクタの描画
 	CTaskManager::Instance()->Render();
+	//コライダの描画
+	CCollisionManager::Instance()->Render();
 }
