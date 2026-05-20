@@ -5,6 +5,8 @@
 #include "CCharacter.h"
 #include "CColliderLine.h"
 #include "CCollisionManager.h"
+#include "CState.h"
+#include "CPlayerIdle.h"
 class CXPlayer : public CXCharacter
 {
 public:
@@ -17,5 +19,9 @@ public:
 
 	void Update() override;
 	CColliderLine mColliderLine;  //ラインコライダ
+private:
+	EState mState; //状態の保持
+	CState* mpState; //状態処理
+	std::unique_ptr<CPlayerIdle> mpIdle; //待機状態
 };
 #endif
