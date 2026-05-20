@@ -8,6 +8,7 @@
 #include "CState.h"
 #include "CPlayerIdle.h"
 #include "CPlayerwalk.h"
+#include "CPlayerAttack.h"
 class CXPlayer : public CXCharacter
 {
 public:
@@ -25,5 +26,6 @@ private:
 	CState* mpState; //ó‘Ôˆ—
 	std::unique_ptr<CPlayerIdle> mpIdle; //‘Ò‹@ó‘Ô
 	std::unique_ptr<CPlayerWalk> mpWalk; //•à‚­ó‘Ô
+	std::unique_ptr<CPlayerAttack> mpAttack; //UŒ‚ó‘Ô
 };
 #endif
