@@ -1,12 +1,13 @@
 ﻿#include "CPlayerIdle.h"
 #include "CXCharacter.h"
+
 //回転速度
 #define ROTATIONSPEED 2.0f
 void CPlayerIdle::Start(CXCharacter* parent)
 {
 	//親のポインタを保存
 	mpParent = parent;
-	//アニメーションの変更
+	//アニメーションの変更ｃ
 	mpParent->ChangeAnimation(0, true, 60);
 	mState = EState::EIDLE; //状態の種類を待機にする
 }
@@ -33,5 +34,8 @@ void CPlayerIdle::Update()
 	{
 		mState = EState::EATTACK;
 	}
-
+	if (mInput.Key(VK_SPACE))
+	{
+		mState = EState::EJUMP;
+	}
 }
