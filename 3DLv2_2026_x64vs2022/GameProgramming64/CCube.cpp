@@ -32,7 +32,6 @@ CCube::CCube()
 void CCube::Update()
 {
 	
-	
 	static float angle = 0.0f;
 
 	angle += 1.0f;
