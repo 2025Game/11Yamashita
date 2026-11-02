@@ -90,5 +90,6 @@ void CApplication::Update()
 	//2D‚Ì•`‰æI—¹
 	CCamera::End();
 
+
 }
 
